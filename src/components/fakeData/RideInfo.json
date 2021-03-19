@@ -1,0 +1,10 @@
+[
+    {"id":"bike","from":"Sylhet","to":"Dhake","rideno":"303","price":"555","image":"https://www.drivespark.com/images/2019-08/suzuki-gixxer-sf-250-motogp-5.jpg","time":"7pm"},
+    {"id":"car","from":"Sylhet","to":"Dhake","rideno":"303","price":"555","image":"https://live.staticflickr.com/4276/34430526733_08218cb233_b.jpg","time":"7pm"},
+    
+    {"id":"bus","from":"Sylhet","to":"Dhake","rideno":"303","price":"555","image":"https://www.uttaramotorsltd.com/wp-content/uploads/2015/12/LT-Bus.png","time":"7pm"},
+    
+    {"id":"train","from":"Sylhet","to":"Dhake","rideno":"303","price":"555","image":"https://static.toiimg.com/photo/63079138.cms","time":"7pm"}
+    
+    
+]
