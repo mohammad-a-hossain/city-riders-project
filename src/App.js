@@ -1,20 +1,66 @@
 import './App.css';
-import { Navbar,Nav,Form, Container, Image,Card,Button } from 'react-bootstrap';
 import Login from './components/login/Login'
 import Header from './components/header/Header';
 import './components/login/login.css'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Home from './components/home/Home';
+import BookingPage from './components/booking/BookingPage';
+import Blog from './components/blog/Blog';
+import Sites from './components/sites/Sites';
+import Destination from './components/destination/Destination';
+import Notfound from './components/notfound/Notfound';
+import { createContext,useState } from 'react';
+import PrivateRoute from './components/privateRount/PrivateRoute';
+
+export const UserContext = createContext()
+
 
 
 function App() {
+  const [userLoggedIn, setUserLoggedIn] = useState({})
   return (
-    <div className="App">
- <Login></Login>
+    <UserContext.Provider value={[userLoggedIn,setUserLoggedIn]}>
+      
+       <Router>
+          <Header/>
+          <Switch>
+            <Route exact path="/">
+              <Home/>
+            </Route>
+            <Route path="/home">
+              <Home/>
+            </Route>
+            <PrivateRoute path="/booking/:ticketType">
+              <BookingPage/>
+            </PrivateRoute>
+            <PrivateRoute path="/blog">
+              <Blog/>
+            </PrivateRoute>
+            <PrivateRoute path="/sites">
+              <Sites/>
+            </PrivateRoute>
+            <PrivateRoute path="/destination">
+              <Destination/>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login/>
+            </Route>
+            <Route path='*'>
+           <Notfound/> 
+          </Route>
+          </Switch>
+      </Router> 
+{/*  <Login></Login> */}
 
-     {/*  <Container fluid style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}}>
+       {/* <Container fluid style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover',backgroundRepeat:'no-repeat'}}>
      <Header/>
 <Container fluid >
  
-     <div className="row col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center m-2" >
+     <div className="row col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center m-2"  >
      <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px'}}>
       <Card.Img variant="top" src="Frame-1.png" />
       <Card.Body>
@@ -54,9 +100,9 @@ function App() {
 <footer className="m-5 p-5">
   <h4>footer is there</h4>
 </footer> 
-</Container> */}
-
-    </div>
+</Container> 
+ */}
+     </UserContext.Provider> 
   );
 }
 

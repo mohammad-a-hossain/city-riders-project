@@ -1,7 +1,13 @@
-import React from 'react'
-import { Navbar,Nav, Container, Image,Card,Button } from 'react-bootstrap';
+import React, { useContext,useState } from 'react'
+import { Navbar,Nav, Container} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { UserContext} from '../../App';
+
 
  const Header = () => {
+  const [userLoggedIn,setUserLoggedIn] = useContext(UserContext)
+  const [user, setUser] = useState(true)
+ 
     return (
         <Container>
         <Navbar collapseOnSelect expand="lg" bg="transparent" variant="">
@@ -11,11 +17,14 @@ import { Navbar,Nav, Container, Image,Card,Button } from 'react-bootstrap';
        <Navbar.Collapse id="responsive-navbar-nav">
      
          <Nav >
-           <Nav.Link href="#features">Home</Nav.Link>
-           <Nav.Link href="#pricing">Sites</Nav.Link>
-           <Nav.Link href="#features">Destination</Nav.Link>
-           <Nav.Link href="#pricing">Blog</Nav.Link>
-           <Nav.Link href="login">Login</Nav.Link>
+           <Link to="/home">Home</Link>
+           <Link to="/sites">Sites</Link>
+           <Link to="/destination">Destination</Link>
+           <Link to="/blog">Blog</Link>
+           <Link to="/login">Login</Link>
+           <p>welcome: {userLoggedIn.displayName || userLoggedIn.name || userLoggedIn.email}</p>
+          {userLoggedIn.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>}
+          {user.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>}
          </Nav>
         
        </Navbar.Collapse>
