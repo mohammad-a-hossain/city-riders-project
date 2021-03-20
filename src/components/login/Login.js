@@ -63,7 +63,11 @@
             if(e.target.name==='password'){
               isFieldValid= e.target.value.length > 6;
                //console.log(isPassValid)
-            }
+            }/* if(e.target.name.value ==='password' !== e.target.name.value ==='confirm_password'){
+                      isFieldValid ="password does not mat"
+               //console.log(isPassValid)
+            } */
+          
         
             if(isFieldValid){
               const newUserInfo ={...user};
@@ -77,7 +81,9 @@
             if(newUser&& user.name && user.password){
              createUserWithEmailAndPassword(user.name,user.email,user.password)
              .then(res =>{
-                 console.log(res)
+                 //console.log(res)
+                 const gotData={...user}
+                 console.log(gotData)
               setUser(res)
               setUserLoggedIn(res)
               history.replace(from)
@@ -114,7 +120,11 @@
 
                 <label for="password">Password</label>
                 <input type="password" id="password" onBlur={handleChange} name="password" placeholder="Your password.." required/>
-
+                
+             {/*   {newUser && <> <label for="confirm_password">Confirm-Password</label>
+                <input type="password" id="password" onBlur={handleChange} name="confirm_password" placeholder="Your password.." required/>
+                </>}
+ */}
                 <input type="submit" value="Submit"/>
              
 

@@ -64,5 +64,3 @@ function App() {
 
 export default App;
 
-//https://media.nationalgeographic.org/assets/photos/000/249/24957.jpg
-//https://cdn.vox-cdn.com/thumbor/Ksi3v8e1tj1ZcQeRV1ZtmCYIM7k=/0x0:4284x2916/1200x800/filters:focal(1800x1116:2484x1800)/cdn.vox-cdn.com/uploads/chorus_image/image/61918529/NorthBroadSt_Landscape_1_M.Edlow.0.jpg

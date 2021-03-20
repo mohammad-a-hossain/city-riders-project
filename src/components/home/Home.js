@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Container,Card ,Image} from 'react-bootstrap';
+import {  Container} from 'react-bootstrap';
 import Ticket from '../ticketItem/Ticket';
 import './home.css'
 
