@@ -34,22 +34,12 @@ import './home.css'
     return (
         <Container fluid className="row d-flex justify-content-center" style={{background:'transparent'}}>
      
-       
-    {/* 
-        <div className="row d-flex justify-content-center" > */}
-
             {
                 tickets.map(tick =><Ticket ticket={tick} key={tick.ticketType}></Ticket>)
             }
             
-
-     
-     {/*    </div> */}
-   
-   </Container>
+        </Container>
   
     )
 }
 export default Home
-
-/* style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}} */

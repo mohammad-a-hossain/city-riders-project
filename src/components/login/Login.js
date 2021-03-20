@@ -3,7 +3,7 @@
         import {Container} from 'react-bootstrap';
         import { useContext, useState } from 'react';
         import { UserContext } from "../../App";
-        import { useHistory, useLocation } from "react-router";
+        import { useHistory, useLocation } from "react-router-dom";
         import { createUserWithEmailAndPassword, faceBookLogin, googleSignIn, initializLoginFrameWork, signInWithEmailAndPassword } from './loginManager.js'
         
         initializLoginFrameWork()
