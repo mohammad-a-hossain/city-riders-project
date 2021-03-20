@@ -11,10 +11,10 @@ import { UserContext} from '../../App';
     return (
       <Container style={{background:'transparent'}} >
       <Navbar collapseOnSelect expand="lg" >
-      <Navbar.Brand >CITY-RIDERS</Navbar.Brand>
+      <Navbar.Brand style={{fontSize:'80px'}} >CITY-RIDERS</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav" style={{background:'transparent'}}>
-        <Nav className="mr-auto">
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto" >
        
           <Link to="/home" style={{marginLeft:'10px'}}>Home</Link>
          

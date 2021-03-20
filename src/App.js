@@ -16,6 +16,7 @@ import Notfound from './components/notfound/Notfound';
 import { createContext,useState } from 'react';
 import PrivateRoute from './components/privateRount/PrivateRoute';
 import { Container } from 'react-bootstrap';
+import Footer from './components/footer/Footer';
 
 export const UserContext = createContext()
 
@@ -55,6 +56,7 @@ function App() {
           </Route>
           </Switch>
       </Router> 
+      <Footer></Footer>
       </Container>
      </UserContext.Provider> 
   );
