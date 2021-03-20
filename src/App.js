@@ -15,6 +15,7 @@ import Destination from './components/destination/Destination';
 import Notfound from './components/notfound/Notfound';
 import { createContext,useState } from 'react';
 import PrivateRoute from './components/privateRount/PrivateRoute';
+import { Container } from 'react-bootstrap';
 
 export const UserContext = createContext()
 
@@ -24,7 +25,7 @@ function App() {
   const [userLoggedIn, setUserLoggedIn] = useState({})
   return (
     <UserContext.Provider value={[userLoggedIn,setUserLoggedIn]}>
-      
+      <Container style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}} fluid>
        <Router>
           <Header/>
           <Switch>
@@ -54,7 +55,7 @@ function App() {
           </Route>
           </Switch>
       </Router> 
-
+      </Container>
      </UserContext.Provider> 
   );
 }

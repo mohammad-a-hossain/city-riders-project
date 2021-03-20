@@ -9,11 +9,11 @@ import { UserContext} from '../../App';
   const [user, setUser] = useState(true)
  
     return (
-      <Container>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+      <Container style={{background:'transparent'}} >
+      <Navbar collapseOnSelect expand="lg" >
       <Navbar.Brand >CITY-RIDERS</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+      <Navbar.Collapse id="responsive-navbar-nav" style={{background:'transparent'}}>
         <Nav className="mr-auto">
        
           <Link to="/home" style={{marginLeft:'10px'}}>Home</Link>

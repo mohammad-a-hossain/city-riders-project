@@ -32,50 +32,24 @@ import './home.css'
         },
     ]
     return (
-        <Container fluid  style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}}>
+        <Container fluid className="row d-flex justify-content-center" style={{background:'transparent'}}>
      
-           {/*  style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}}
-     */}
- 
-    
-        <div className="row d-flex justify-content-center" >
+       
+    {/* 
+        <div className="row d-flex justify-content-center" > */}
 
             {
                 tickets.map(tick =><Ticket ticket={tick} key={tick.ticketType}></Ticket>)
             }
             
 
-      {/*   <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px'}}>
-         <Card.Img variant="top" src="Frame-1.png" />
-         <Card.Body>
-           <Card.Title>Bike</Card.Title>
-         </Card.Body>
-        </Card> */}
-    {/* 
-       <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px',marginLeft:'20px'}}>
-         <Card.Img variant="top" src="Frame-1.png" />
-         <Card.Body>
-           <Card.Title>Card Title</Card.Title>
-         </Card.Body>
-       </Card>
-    */}
-   {/*     <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px',marginLeft:'20px'}}>
-         <Card.Img variant="top" src="Frame-1.png" />
-         <Card.Body>
-           <Card.Title>Card Title</Card.Title>
-         </Card.Body>
-       </Card>
-    */}
-{/*        <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px',marginLeft:'20px'}}>
-         <Card.Img variant="top" src="Frame-1.png" />
-         <Card.Body>
-           <Card.Title>Train</Card.Title>
-         </Card.Body>
-       </Card>  */}    
-        </div>
+     
+     {/*    </div> */}
    
    </Container>
   
     )
 }
 export default Home
+
+/* style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}} */
