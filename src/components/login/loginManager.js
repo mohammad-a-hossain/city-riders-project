@@ -37,25 +37,6 @@ export const googleSignIn = () => {
     });
 };
 
-/* export const googleSignOut = () => {
-  return firebase
-    .auth()
-    .signOut()
-    .then((res) => {
-      const signOutUser = {
-        isSignIn: false,
-        name: "",
-        email: "",
-        photo: "",
-        error: "",
-        success: false,
-      };
-      return signOutUser;
-    });
-};
- */
-
-
 /* ------------------Facebook login------------------ */
 
 export const faceBookLogin = () => {
@@ -122,6 +103,7 @@ export const signInWithEmailAndPassword = (email, password) => {
       const newUserInfo = {};
       newUserInfo.error = error.message;
       newUserInfo.success = false;
+      console.log(newUserInfo)
       return newUserInfo;
     });
 };

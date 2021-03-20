@@ -9,12 +9,12 @@ import { Link } from 'react-router-dom';
      const {title,imgUrl,ticketType} =props.ticket
     return (
         <div>
-             <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px'}}>
+             <Card style={{ width: '18rem'}}>
          <Card.Img variant="top" src={imgUrl} />
          <Card.Body>
            <Card.Title>
                
-                <Link to={`/booking/${ticketType}`} key={ticketType}> <button >{title}</button></Link>   
+                <Link to={`/booking/${ticketType}`} key={ticketType}> <button style={{border:'none',wordSpacing:'2px'}}>{title}</button></Link>   
             
            </Card.Title>
          

@@ -11,7 +11,7 @@ import { UserContext} from '../../App';
     return (
         <Container>
         <Navbar collapseOnSelect expand="lg" bg="transparent" variant="">
-       <Navbar.Brand href="#home" style={{fontSize:'50px',color:'red'}}>GET CITY-RIDES</Navbar.Brand>
+       <Navbar.Brand href="#home" style={{fontSize:'70px',color:'red'}}>GET CITY-RIDES</Navbar.Brand>
        
        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
        <Navbar.Collapse id="responsive-navbar-nav">

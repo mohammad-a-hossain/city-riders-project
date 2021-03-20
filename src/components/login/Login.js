@@ -73,13 +73,7 @@ import firebaseConfig from './firebase.config.js'
              history.replace(from)
            })
         }
-    /*     const setGoogleSignOut=()=>{
-            googleSignOut()
-            .then(res =>{
-              setUser(res)
-              setUserLoggedIn(res)
-            })
-        } */
+   
         const setFaceBookLogin=()=> {
           faceBookLogin()
              .then(res =>{
@@ -128,7 +122,8 @@ import firebaseConfig from './firebase.config.js'
             }
             if(!newUser && user.email && user.password){
                signInWithEmailAndPassword(user.email,user.password)
-               .then(res =>{console.log(res)
+               .then(res =>{
+                 console.log(res)
                 setUser(res)
                 setUserLoggedIn(res)
                 history.replace(from)
@@ -148,7 +143,8 @@ import firebaseConfig from './firebase.config.js'
             <form onSubmit={handleSubmit}>
                 {!newUser ?<h1>Login Here</h1>:<h1>Sign-up here</h1>}
              {newUser && <> <label for="name">Name</label>
-              <input type="text"  onBlur={handleChange} name="name" placeholder="Your name.." required/> </>}
+              <input type="text"  onBlur={handleChange} name="name" placeholder="Your name.." required/> 
+              </>}
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" onBlur={handleChange} placeholder="Your email.." required/>
@@ -156,15 +152,12 @@ import firebaseConfig from './firebase.config.js'
                 <label for="password">Password</label>
                 <input type="password" id="password" onBlur={handleChange} name="password" placeholder="Your password.." required/>
 
-              {/*   <label for="con-password">Confirm Password</label>
-                <input type="password" id="con-password" onBlur={handleChange} name="con-password" placeholder="confirm password." required/>
-             */}
                 <input type="submit" value="Submit"/>
-               {/*  <p>{user.error}</p> 
-                {user.success && <p>you have created successfully a acount</p>} */}
+             
+
                <h3>new user ?</h3><input type="checkbox" onChange={()=>setNewUser(!newUser)} value="Sign-up here"  name="newUser"/> - Sign-Up
-                <p style={{color:'red'}}>{user.error}</p>
-                {user.success && <p style={{color:'green'}}>user {newUser ? "created" :"logged in"} successfully</p>}
+                <p style={{color:'red'}}>{newUser.error}</p>
+                {newUser.success && <p style={{color:'green'}}>user {newUser ? "created" :"logged in"} successfully</p>}
     
             </form>
   

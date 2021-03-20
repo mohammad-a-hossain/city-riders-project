@@ -1,42 +1,51 @@
 import React from 'react'
 import {  Container,Card} from 'react-bootstrap';
 import Ticket from '../ticketItem/Ticket';
+import './home.css'
 
 
  const Home = () => {
 
     const tickets = [
         {
-            title: 'Bike',
+            title: 'BIKE',
           
-            imgUrl: '../images/Frame-1.png',
+            imgUrl: 'https://www.drivespark.com/images/2019-08/suzuki-gixxer-sf-250-motogp-5.jpg',
             ticketType: 'bike' 
         },
         {
-            title: 'car',
-            imgUrl: '../images/Frame-2.png',
+            title: 'CAR',
+            imgUrl: 'https://live.staticflickr.com/4276/34430526733_08218cb233_b.jpg',
             ticketType: 'car' 
         },
         {
-            title: 'Bus',
-            imgUrl: '../images/Frame.png',
+            title: 'BUS',
+            imgUrl: 'https://www.uttaramotorsltd.com/wp-content/uploads/2015/12/LT-Bus.png',
             ticketType: 'bus' 
          
         },
         {
-            title: 'Train',
-            imgUrl: '../images/Group.png',
+            title: 'TRAIN',
+            imgUrl: 'https://static.toiimg.com/photo/63079138.cms',
             ticketType: 'train' 
          
         },
     ]
     return (
-        <Container fluid >
+        <Container fluid style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover',backgroundRepeat:"no-repeat"}}>
+      {/*       background: url(../images/1.jpg) no-repeat scroll 0 0 transparent;    
+  background-repeat:no-repeat;  
+  -webkit-background-size:cover;    
+  -moz-background-size:cover;   
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;   
+  height:850px; */}
            {/*  style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}}
      */}
    <Container fluid >
     
-        <div className="row col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center" >
+        <div className="row d-flex justify-content-center" >
 
             {
                 tickets.map(tick =><Ticket ticket={tick} key={tick.ticketType}></Ticket>)
@@ -73,9 +82,9 @@ import Ticket from '../ticketItem/Ticket';
         </div>
    
    </Container>
-   <footer className="m-5 p-5">
+   {/* <footer className="m-5 p-5">
      <h4>footer is there</h4>
-   </footer> 
+   </footer> */} 
    </Container>
     )
 }
