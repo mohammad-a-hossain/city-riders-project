@@ -1,40 +1,3 @@
-/* import React from 'react'
-import './login.css'
-import {Container} from 'react-bootstrap';
-import  firebase from "firebase/app"
-import "firebase/auth";
-import firebaseConfig from './firebase.config.js'
-
-
- const Login = () => {
-    if(firebase.apps.length === 0){
-        firebase.initializeApp(firebaseConfig);
-    }
-    
-    var provider = new firebase.auth.GoogleAuthProvider();
-        const googleSignIn=()=>{
-            firebase.auth()
-            .signInWithPopup(provider)
-            .then((result) => {
-                var credential = result.credential;
-                var token = credential.accessToken;
-                var user = result.user;
-                console.log(user)
-                // ...
-            }).catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                var email = error.email;
-                var credential = error.credential;
-                console.log(errorCode,errorMessage)
-                // ...
-            });
-        }
-
-
- */ 
-
-
         import React from 'react'
         import './login.css'
         import {Container} from 'react-bootstrap';
@@ -156,11 +119,11 @@ import firebaseConfig from './firebase.config.js'
              
 
                <h3>new user ?</h3><input type="checkbox" onChange={()=>setNewUser(!newUser)} value="Sign-up here"  name="newUser"/> - Sign-Up
-                <p style={{color:'red'}}>{newUser.error}</p>
-                {newUser.success && <p style={{color:'green'}}>user {newUser ? "created" :"logged in"} successfully</p>}
+                
     
             </form>
-  
+          <p style={{color:'red'}}>{newUser.error}</p>
+          {newUser.success && <p style={{color:'green'}}>user {newUser ? "created" :"logged in"} successfully</p>}
             <hr></hr>
             <div><button onClick={setFaceBookLogin} >Login With Facebook</button> </div>
             <div><button onClick={setGoogleSignIn}>Login With Google</button> </div>

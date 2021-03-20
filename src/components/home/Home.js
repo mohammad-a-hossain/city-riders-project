@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Container,Card} from 'react-bootstrap';
+import {  Container,Card ,Image} from 'react-bootstrap';
 import Ticket from '../ticketItem/Ticket';
 import './home.css'
 
@@ -32,18 +32,11 @@ import './home.css'
         },
     ]
     return (
-        <Container fluid style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover',backgroundRepeat:"no-repeat"}}>
-      {/*       background: url(../images/1.jpg) no-repeat scroll 0 0 transparent;    
-  background-repeat:no-repeat;  
-  -webkit-background-size:cover;    
-  -moz-background-size:cover;   
-  -o-background-size:cover;
-  background-size:cover;
-  background-position:center;   
-  height:850px; */}
+        <Container fluid  style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}}>
+     
            {/*  style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover'}}
      */}
-   <Container fluid >
+ 
     
         <div className="row d-flex justify-content-center" >
 
@@ -82,10 +75,7 @@ import './home.css'
         </div>
    
    </Container>
-   {/* <footer className="m-5 p-5">
-     <h4>footer is there</h4>
-   </footer> */} 
-   </Container>
+  
     )
 }
 export default Home

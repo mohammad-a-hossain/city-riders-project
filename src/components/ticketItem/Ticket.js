@@ -1,26 +1,22 @@
+
 import React from 'react'
 import { Card} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
+
 
 
 
  const Ticket = (props) => {
-    // console.log(props)
+     //console.log(props)
      const {title,imgUrl,ticketType} =props.ticket
+     const history =useHistory()
     return (
-        <div>
-             <Card style={{ width: '18rem'}}>
-         <Card.Img variant="top" src={imgUrl} />
-         <Card.Body>
-           <Card.Title>
-               
-                <Link to={`/booking/${ticketType}`} key={ticketType}> <button style={{border:'none',wordSpacing:'2px'}}>{title}</button></Link>   
-            
-           </Card.Title>
-         
-         </Card.Body>
-        </Card>
-        </div>
+<Card className="bg-light text-black" style={{ width: '18rem',marginLeft:'20px'}}>
+<Card.Img variant="top" src={imgUrl}  />
+  <button onClick={()=>history.push(`/booking/${ticketType}`)} style={{border:'none'}}>{title}</button>
+</Card>
     )
+      
 }
 export default Ticket
+

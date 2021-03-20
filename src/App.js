@@ -54,54 +54,7 @@ function App() {
           </Route>
           </Switch>
       </Router> 
-{/*  <Login></Login> */}
 
-       {/* <Container fluid style={{backgroundImage:'url(https://lifepart2.com/wp-content/uploads/2019/09/Center_City_Philadelphia-1024x768.jpg)',backgroundPosition:'center',backgroundSize:'cover',backgroundRepeat:'no-repeat'}}>
-     <Header/>
-<Container fluid >
- 
-     <div className="row col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center m-2"  >
-     <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px'}}>
-      <Card.Img variant="top" src="Frame-1.png" />
-      <Card.Body>
-        <Card.Title>Bike</Card.Title>
-       
-     
-      </Card.Body>
-     </Card>
-
-    <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px',marginLeft:'20px'}}>
-      <Card.Img variant="top" src="Frame-1.png" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-      
-     
-      </Card.Body>
-    </Card>
-
-    <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px',marginLeft:'20px'}}>
-      <Card.Img variant="top" src="Frame-1.png" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-      
-      </Card.Body>
-    </Card>
-
-    <Card style={{ width: '18rem',marginBottom:'200px',marginTop:'200px',marginLeft:'20px'}}>
-      <Card.Img variant="top" src="Frame-1.png" />
-      <Card.Body>
-        <Card.Title>Train</Card.Title>
-
-      </Card.Body>
-    </Card>     
-     </div>
-
-</Container>
-<footer className="m-5 p-5">
-  <h4>footer is there</h4>
-</footer> 
-</Container> 
- */}
      </UserContext.Provider> 
   );
 }
