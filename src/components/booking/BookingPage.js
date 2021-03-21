@@ -61,7 +61,7 @@ import { Col, Container, Row } from 'react-bootstrap'
         <label for="date">Date To </label>
         <input type="date"  onBlur={handleChange}  name="dateTo"/>
         <button >search</button>
-             {/*  <input type="checkbox" onChange={()=>setUser(!user)} value="check it"  name="user" ></input> */}
+            
               
            
       </form>:

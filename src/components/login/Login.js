@@ -1,4 +1,6 @@
         import React from 'react'
+        import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+        import { faFacebookF} from '@fortawesome/free-brands-svg-icons';
         import './login.css'
         import {Container} from 'react-bootstrap';
         import { useContext, useState } from 'react';
@@ -135,8 +137,9 @@
           <p style={{color:'red'}}>{newUser.error}</p>
           {newUser.success && <p style={{color:'green'}}>user {newUser ? "created" :"logged in"} successfully</p>}
             <hr></hr>
-            <div><button onClick={setFaceBookLogin} >Login With Facebook</button> </div>
-            <div><button onClick={setGoogleSignIn}>Login With Google</button> </div>
+            <div><button onClick={setFaceBookLogin}  style={{width:'200px',height:'50px',borderRadius:'20%',border:'none',backgroundColor:'Chocolate',color:'black'}} ><FontAwesomeIcon icon={faFacebookF} style={{color:'blue',marginRight:'10px',fontSize:'20px'}}></FontAwesomeIcon>Facebook-Login</button> </div>
+
+            <div><button onClick={setGoogleSignIn} style={{width:'200px',height:'50px',borderRadius:'20%',border:'none',color:'black',backgroundColor:'Chocolate'}}><img src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png" alt="" style={{width:'20px',height:"20px"}}></img> Google Login</button> </div>
             </div>
             </Container>
         </Container>
