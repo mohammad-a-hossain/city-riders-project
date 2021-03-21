@@ -14,7 +14,7 @@ import { useHistory } from 'react-router';
       
       <Card className="bg-light text-black" style={{ width: '18rem',margin:'20px'}}>
       <Card.Img variant="top" src={imgUrl}  />
-        <button onClick={()=>history.push(`/booking/${ticketType}`)} style={{border:'none'}}>{title}</button>
+        <button onClick={()=>history.push(`/booking/${ticketType}`)} style={{border:'none'}}>{title}</button> 
       </Card>
     )
       

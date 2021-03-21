@@ -8,7 +8,6 @@ import {
   Route
 } from "react-router-dom";
 import Home from './components/home/Home';
-import BookingPage from './components/booking/BookingPage';
 import Blog from './components/blog/Blog';
 import Sites from './components/sites/Sites';
 import Destination from './components/destination/Destination';
@@ -17,6 +16,7 @@ import { createContext,useState } from 'react';
 import PrivateRoute from './components/privateRount/PrivateRoute';
 import { Container } from 'react-bootstrap';
 import Footer from './components/footer/Footer';
+import BookingPage from './components/booking/BookingPage';
 
 export const UserContext = createContext()
 
@@ -47,7 +47,7 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/destination">
               <Destination/>
-            </PrivateRoute>
+            </PrivateRoute> 
             <Route path="/login">
               <Login/>
             </Route>

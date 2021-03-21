@@ -16,19 +16,16 @@ import { UserContext} from '../../App';
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto" >
        
-          <Link to="/home" style={{marginLeft:'10px'}}>Home</Link>
+          <Link to="/home" style={{marginLeft:'10px',fontSize:'18px'}}>Home</Link>
          
-          <Link  style={{marginLeft:'10px'}} to="/sites">Sites</Link>
-          <Link  style={{marginLeft:'10px'}} to="/destination">Destination</Link>
-          <Link  style={{marginLeft:'10px'}} to="/blog">Blog</Link>
+          <Link  style={{marginLeft:'10px',fontSize:'18px'}} to="/sites">Sites</Link>
+          <Link  style={{marginLeft:'10px',fontSize:'18px'}} to="/destination">Destination</Link>
+          <Link  style={{marginLeft:'10px',fontSize:'18px'}} to="/blog">Blog</Link>
         </Nav>
         <Nav>
-        <Nav.Link  to="##">welcome: {userLoggedIn.displayName || userLoggedIn.name || userLoggedIn.email}</Nav.Link >
-     {/*    {userLoggedIn.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>}
-          {user.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>} */}
-          
-          <Link  style={{marginLeft:'20px',marginTop:'10px',backgroundColor:'orange',textDecoration:'none',color:'black'}}  to="/login">Login</Link >
-          <button style={{border:'none',marginLeft:'5px'}} onClick={()=>setUserLoggedIn({})} >sign-out</button>
+        <Nav.Link  to="##">{userLoggedIn.displayName || userLoggedIn.name || userLoggedIn.email || user.name}</Nav.Link >  
+          <Link  style={{marginLeft:'20px',marginTop:'10px',backgroundColor:'orange',textDecoration:'none',color:'black',fontSize:'18px'}}  to="/login">Login</Link >
+          <button style={{border:'none',marginLeft:'5px',fontSize:'18px'}} onClick={()=>setUserLoggedIn({})} >sign-out</button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

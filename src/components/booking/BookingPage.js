@@ -10,11 +10,11 @@ import { Col, Container, Row } from 'react-bootstrap'
 
  const BookingPage = (props) => { 
     const {ticketType}= useParams()
-    console.log(ticketType)
+    //console.log(ticketType)
 
     const data=[...Rideinfo]
     const [rider, setRiders] = useState(data)
-    console.log(rider)
+   // console.log(rider)
      
      const getRider= rider.filter(tType => tType.id === ticketType)
        // console.log(getRider) 
@@ -51,20 +51,14 @@ import { Col, Container, Row } from 'react-bootstrap'
     <Col sm={12} lg={4}>
    {!user.isFillUp ? <form onSubmit={handleSubmit}>
         <label for="from">Pick From</label>
-        <input type="text"  onBlur={handleChange} name="from" placeholder="Sylhet" required/> 
-
+        <input type="text"  onBlur={handleChange} name="from" placeholder="Sylhet" required/>
         <label for="to">Pick To</label>
         <input type="text" onBlur={handleChange}  name="to"  placeholder="Dhake" required/>
-
         <label for="date">Date From</label>
-        <input type="date"  onBlur={handleChange} name="dateFrom" />
-
+        <input type="date"  onBlur={handleChange} name="dateFrom"  required />
         <label for="date">Date To </label>
-        <input type="date"  onBlur={handleChange}  name="dateTo"/>
+        <input type="date"  onBlur={handleChange}  name="dateTo"  required/>
         <button >search</button>
-            
-              
-           
       </form>:
       <div className="mt-2">
         <h3>From:{user.from} </h3>
@@ -73,7 +67,7 @@ import { Col, Container, Row } from 'react-bootstrap'
         <h5>rider No:-{ getRider.map(key =>key.rideno)}</h5>
         <h5> price : ${ getRider.map(key =>key.price)}</h5>
         <h5>start time:{ getRider.map(key =>key.time)}</h5>
-        <img src={ getRider.map(key =>key.image)} style={{width:'50px',height:'50px'}}></img>
+        <img src={ getRider.map(key =>key.image)} style={{width:'50px',height:'50px'}} alt="riderImage"></img>
       </div>}
     </Col>
     <Col sm={12} lg={8}>
