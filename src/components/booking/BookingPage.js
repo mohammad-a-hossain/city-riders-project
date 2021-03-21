@@ -17,8 +17,9 @@ import { Col, Container, Row } from 'react-bootstrap'
     console.log(rider)
      
      const getRider= rider.filter(tType => tType.id === ticketType)
-        console.log(getRider) 
-    
+       // console.log(getRider) 
+       //getRider.json()
+      getRider.map(key =>console.log(key.price))
 
     const [user,setUser] =useState({
       isFillUp:false,
@@ -66,7 +67,13 @@ import { Col, Container, Row } from 'react-bootstrap'
            
       </form>:
       <div className="mt-2">
-        <p>from </p><p>to </p><p>date </p>
+        <h3>From:{user.from} </h3>
+        <h3>to {user.to} </h3>
+        <p>date from:-{user.dateFrom} -to:{user.dateTo}</p>
+        <h5>rider No:-{ getRider.map(key =>key.rideno)}</h5>
+        <h5> price : ${ getRider.map(key =>key.price)}</h5>
+        <h5>start time:{ getRider.map(key =>key.time)}</h5>
+        <img src={ getRider.map(key =>key.image)} style={{width:'50px',height:'50px'}}></img>
       </div>}
     </Col>
     <Col sm={12} lg={8}>

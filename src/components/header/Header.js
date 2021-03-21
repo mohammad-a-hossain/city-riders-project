@@ -24,9 +24,11 @@ import { UserContext} from '../../App';
         </Nav>
         <Nav>
         <Nav.Link  to="##">welcome: {userLoggedIn.displayName || userLoggedIn.name || userLoggedIn.email}</Nav.Link >
-        {userLoggedIn.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>}
-          {user.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>}
-          <Link  style={{marginLeft:'20px',marginTop:'10px'}}  to="/login">Login</Link >
+     {/*    {userLoggedIn.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>}
+          {user.isSignIn && <button style={{float:'right'}} onClick={()=>setUserLoggedIn({})} >Sign-Out</button>} */}
+          
+          <Link  style={{marginLeft:'20px',marginTop:'10px',backgroundColor:'orange',textDecoration:'none',color:'black'}}  to="/login">Login</Link >
+          <button style={{border:'none',marginLeft:'5px'}} onClick={()=>setUserLoggedIn({})} >sign-out</button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
